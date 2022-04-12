@@ -1,0 +1,128 @@
+:root {
+    --clr-primary-200: hsl(31, 77%, 52%);
+    --clr-primary-600: hsl(184, 100%, 22%);
+    --clr-primary-800: hsl(179, 100%, 13%);
+    
+    --clr-neutral-100: hsl(0, 0%, 95%);
+    --clr-neutral-300: hsla(0, 0%, 100%, 0.75);
+
+    --ff-primary: 'Lexan Deca', sans-serif;
+    --ff-secondary: 'Big Shoulders Display';
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-size: 15px;
+    line-height: 1.4rem;
+    background-color: darkgray;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wraper1 {
+    background-color: var(--clr-primary-200);
+    border-radius: 0.6em 0 0 0.6em;
+}
+
+.wraper2 {
+    background-color: var(--clr-primary-600);
+}
+
+.wraper3 {
+    background-color: var(--clr-primary-800);
+    border-radius: 0 0.6em 0.6em 0;
+}
+
+
+.wraper1, .wraper2, .wraper3 {
+    padding: 2em 2em 2em 3em;
+    max-width: 13em;
+    min-width: 11em;
+}
+
+h1 {
+    padding: 1em 0em 1em 0em;
+    font-family: var(--ff-secondary);
+    text-transform: uppercase;
+    color: var(--clr-neutral-100);
+}
+
+p {
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    color: var(--clr-neutral-300);
+}
+
+.button {
+    margin-top: 4em;
+    margin-bottom: 2em;
+    border: solid 2px var(--clr-neutral-300);
+    border-radius: 1.6em;
+    padding: 0.4em;;
+    max-width: 7.2em;
+    text-align: center;
+    background-color: var(--clr-neutral-100);
+}
+
+.wraper1 > a >.button > p {
+    color: var(--clr-primary-200);
+}
+
+.wraper2 > a > .button > p {
+    color: var(--clr-primary-600);
+}
+
+.wraper3 > a > .button > p {
+    color: var(--clr-primary-800);
+}
+
+.button:hover {
+    background-color: transparent;
+}
+
+.wraper1 > a >.button:hover > p,
+.wraper2 > a >.button:hover > p,
+.wraper3 > a >.button:hover > p
+ {
+    color: var(--clr-neutral-300);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--clr-neutral-300);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1px;
+}
+
+@media screen and (max-width: 815px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .wraper1 {
+        border-radius: 0.6em 0.6em 0 0;
+    }
+    .wraper3 {
+        border-radius:  0 0 0.6em 0.6em;
+    }
+}
